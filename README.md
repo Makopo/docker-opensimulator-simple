@@ -2,7 +2,7 @@
 
 It is based on [official mono docker image](https://hub.docker.com/_/mono/).
 
-* [OpenSimulator](http://opensimulator.org) 0.9.0.0-rc1
+* [OpenSimulator](http://opensimulator.org) 0.9.0.0-rc2
 * Standalone Mode (port 9000)
 * Username: Test User 
 * Password: password
