@@ -29,7 +29,13 @@ You will need to forward both TCP and UDP port 9000 to your host.
 $ docker run --name=opensim -p 9000:9000 -p 9000:9000/udp -d opensim
 ```
 
-If you need to run any admin command on console, run it like that:
+You can see the console logs like that:
+
+```
+$ docker logs -f opensim
+```
+
+If you need to run any admin command on console, start the container like that:
 
 ```
 $ docker run --name=opensim -it -p 9000:9000 -p 9000:9000/udp opensim
