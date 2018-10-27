@@ -7,7 +7,7 @@ It is based on [official mono docker image](https://hub.docker.com/r/library/mon
 * Username: Test User 
 * Password: password
 
-For other settings, look at OpenSim.ini and Regions.ini.
+See [OpenSim.ini.example](https://github.com/opensim/opensim/blob/master/bin/OpenSim.ini.example) and [Regions.ini.example](https://github.com/opensim/opensim/blob/master/bin/Regions/Regions.ini.example) for available settings.
 
 ### Building
 
@@ -29,27 +29,27 @@ You will need to forward both TCP and UDP port 9000 to your host.
 $ docker run --name=opensim -p 9000:9000 -p 9000:9000/udp -d opensim
 ```
 
-You can see the console logs like that:
+To see the console logs:
 
 ```
 $ docker logs -f opensim
 ```
 
-If you need to run any admin command on console, start the container like that:
+To run any admin command, view the files, ...:
 
 ```
-$ docker run --name=opensim -it -p 9000:9000 -p 9000:9000/udp opensim
+$ docker exec -it opensim bash
 ```
 
-NOTE: Currently, you may not be able to terminate the docker container even if you 'quit' the console. You'll need to run docker stop command from another terminal to kill the container.
+NOTE: Currently, you may not be able to terminate the docker container even if you 'quit' the console. You'll need to run `docker stop` command from another terminal to kill the container.
 
 ### Connecting
 
-Login URI should be look like that.
+Login URI should look like this.
 
 http://localhost:9000/
 
-If you use Docker Toolbox or other hosts than localhost, "localhost" should be changed to your docker machine host name or ip. Before that, you'll probablly need to change the value of "ExternalHostName" in Regions.ini file and rebuild this image.
+If you use Docker Toolbox or other hosts than localhost, you'll need to modify "localhost" so that it will be the same as your docker machine host name or ip. You may need to change the value of "ExternalHostName" in Regions.ini file as well. After changing, rebuild this image.
 
 
 ### Maintainer
