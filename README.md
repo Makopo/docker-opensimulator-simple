@@ -1,8 +1,8 @@
 ## Dockerfile for OpenSimulator
 
-It is based on [official mono docker image](https://hub.docker.com/_/mono/).
+It is based on [official mono docker image](https://hub.docker.com/r/library/mono/).
 
-* [OpenSimulator](http://opensimulator.org) 0.9.0.0-rc2
+* [OpenSimulator](http://opensimulator.org) 0.9.0.1
 * Standalone Mode (port 9000)
 * Username: Test User 
 * Password: password
